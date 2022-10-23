@@ -3,7 +3,7 @@
 
 /*css class selector for the outer most div element*/
 #container {
-  background-color: gray;
   width: 360px;
   margin: 0 auto; /*topbot leftright - center div horizontally*/
+  border: 2px solid gray; /*size type color*/
 }
