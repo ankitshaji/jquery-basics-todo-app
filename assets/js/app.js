@@ -28,3 +28,22 @@ $("span").click(function (e) {
   //clickEventObject.syncMethod()
   e.stopPropagation(); //prevent the parent elements that executed addEventListner with clickEventStringObject from running its callback - ie prevent event bubbling up
 });
+
+//**************************
+//Press enter to add Todo
+//**************************
+//jQueryWebApiMethod("css element selector") -> jQueryListObject with all matching elementObjects
+//jQueryListObject.asyncMethod(callback) - setter - execute addEventListener with keypressEventStringObject on all elementObjects in jQueryListObject
+$("input[type='text']").keypress(function (e) {
+  //check if keypressed is enter (ie if charecter keycode is 13) - jQuery normalise .which property in all browsers
+  if (e.which === 13) {
+    //grabbing the toDoText(value) from input
+    //jQueryListObject.method - getter - return value of first matching elementObject in jQueryListObject
+    const toDoText = $(this).val();
+    //jQueryListObject.method(stringObject) - setter - sets the  value for all elementObjects in jQueryListObject
+    $(this).val(""); //clear input
+    //create a new li element and add it as a child to the parent ul element
+    //jQueryListObject.syncMethod("htmlMarkupStringObject") - setter - creates and sets child element in all elementObjects(parent elements) in jQueryListObject
+    $("ul").append(`<li><span>X</span> ${toDoText}</li>`);
+  }
+});
