@@ -2,8 +2,9 @@
 //Check Off Specific Todos By Clicking
 //*************************************
 //jQueryWebApiMethod("css element selector") -> jQueryListObject with all matching elementObjects
-//jQueryListObject.asyncMethod(callback) - setter - execute addEventListener with clickEventStringObject on all elementObjects in jQueryListObject
-$("li").click(function (e) {
+//jQueryListObject.asyncMethod("eventStringObject","childElementStringObject",callback) - setter - execute addEventListener with clickEventStringObject on all elementObjects in jQueryListObject
+//NOTE - since we can only call addEventListener on already existing elements we call addEventListener on parent element and specify the present/future child elements that need to be clicked on to exectue the callback
+$("ul").on("click", "li", function (e) {
   //jQueryWebApiMethod(this keyword - specific left of dot elementObject) -> jQueryListObject with 1 specific elementObject
   //jQueryListObject.syncMethod("css class") - setter - set/remove class attribute on 1 specific elementObject
   $(this).toggleClass("completed");
@@ -13,8 +14,9 @@ $("li").click(function (e) {
 //Click on X to delete Todo
 //**************************
 //jQueryWebApiMethod("css element selector") -> jQueryListObject with all matching elementObjects
-//jQueryListObject.asyncMethod(callback) - setter - execute addEventListener with clickEventStringObject on all elementObjects in jQueryListObject
-$("span").click(function (e) {
+//jQueryListObject.asyncMethod("eventStringObject","childElementStringObject",callback) - setter - execute addEventListener with clickEventStringObject on all elementObjects in jQueryListObject
+//NOTE - since we can only call addEventListener on already existing elements we call addEventListener on parent element and specify the present/future child elements that need to be clicked on to exectue the callback
+$("ul").on("click", "span", function (e) {
   //jQueryWebApiMethod(this keyword - specific left of dot elementObject) -> jQueryListObject with 1 specific elementObject
   //jQueryListObject.syncMethod() -> jQueryListObject with 1 specific parentElementObject
   //parentjQueryListObject.asyncMethod(milliseconds,callback) - setter - set inline style property on specific elementObject in jQueryListObject
