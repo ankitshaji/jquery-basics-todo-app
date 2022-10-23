@@ -1,9 +1,15 @@
 /*using css selectors to add css properties */
 /*overwrite other css libraries style.css file with our own style.css file */
 
-/*css class selector for the outer most div element*/
+/*css id selector for the outer most div element*/
 #container {
   width: 360px;
   margin: 0 auto; /*topbot leftright - center div horizontally*/
   border: 2px solid gray; /*size type color*/
+}
+
+/*css class selector for li elements - not yet set*/
+.completed {
+  color: gray;
+  text-decoration: line-through;
 }
