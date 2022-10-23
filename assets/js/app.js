@@ -17,7 +17,8 @@ $("li").click(function (e) {
 $("span").click(function (e) {
   //jQueryWebApiMethod(this keyword - specific left of dot elementObject) -> jQueryListObject with 1 specific elementObject
   //jQueryListObject.syncMethod() -> jQueryListObject with 1 specific parentElementObject
-  //parentjQueryListObject.asyncMethod(milliseconds,callback) - execute callback after set millisecond
+  //parentjQueryListObject.asyncMethod(milliseconds,callback) - setter - set inline style property on specific elementObject in jQueryListObject
+  //first reduce opacity then set display property to none - within set milliseconds timeframe - then execute callback
   $(this)
     .parent()
     .fadeOut(500, function () {
