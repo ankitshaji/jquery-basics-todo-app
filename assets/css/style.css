@@ -1,11 +1,66 @@
 /*using css selectors to add css properties */
 /*overwrite other css libraries style.css file with our own style.css file */
 
+/*css element selector for body element*/
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+/*css element selector for h1 element*/
+h1 {
+  background: #2980b9;
+  color: white; /*font color*/
+  margin: 0; /*topbotleftright*/
+  padding: 10px 20px; /*topbot leftright*/
+  text-transform: uppercase; /*set text to uppercase*/
+  font-size: 24px;
+  font-weight: normal; /*overwrite default h1 bold font-weight*/
+}
+
+/*css element selector for input element*/
+input {
+  font-size: 18px;
+  color: #2980b9; /*font color*/
+  background: #f7f7f7;
+  width: 100%; /*horizontally fill parent element*/
+  padding: 13px 13px 13px 20px; /*top bot left right*/
+  -webkit-box-sizing: border-box; /*css property vendor prefix to set older syntax css property value for chromes older browser engines*/
+  box-sizing: border-box; /*newest css property value syntax waiting to be normalized in all browsers*/ /*width and height properties become inclusive of padding and border but not margin*/
+}
+
+/*pseudo class added onto input element selector*/
+input:focus {
+  background: white;
+  border: 3px solid #2980b9; /*width,style,color*/
+  outline: none;
+}
+
+/*css element selector for ul element*/
+ul {
+  list-style: none; /*remove bulletpoints on lis*/
+  margin: 0; /*topbotleftright*/
+  padding: 0; /*topbotleftright*/
+}
+
+/*css element selector for li element*/
+li {
+  background: #fff;
+  height: 40px; /*increase height of element*/
+  line-height: 40px; /*increase height of line*/
+  color: #666; /*font color*/
+}
+
+/*pseudo class added onto li element selector*/
+li:nth-child(2n) {
+  background: #f7f7f7;
+}
+
 /*css id selector for the outer most div element*/
 #container {
   width: 360px;
-  margin: 0 auto; /*topbot leftright - center div horizontally*/
-  border: 2px solid gray; /*size type color*/
+  margin: 100px auto; /*topbot leftright - auto to center div horizontally*/
+  background: #f7f7f7;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1); /*horizontal-offset,vertical-offset,blur-radius,color*/
 }
 
 /*css class selector for li elements - not yet set*/
