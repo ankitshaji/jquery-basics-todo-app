@@ -44,6 +44,7 @@ input {
   padding: 13px 13px 13px 20px; /*top bot left right*/
   -webkit-box-sizing: border-box; /*css property vendor prefix to set older syntax css property value for chromes older browser engines*/
   box-sizing: border-box; /*newest css property value syntax waiting to be normalized in all browsers*/ /*width and height properties become inclusive of padding and border but not margin*/
+  border: 3px solid rgba(0, 0, 0, 0); /*invisible border for better transition to border in focus pseudo class*/
 }
 
 /*pseudo class added onto input element selector*/
@@ -60,7 +61,7 @@ ul {
   padding: 0; /*topbotleftright*/
 }
 
-/*css element selector for li element*/
+/*css element selector for li elements*/
 li {
   background: #fff;
   height: 40px; /*increase height of element*/
@@ -68,9 +69,28 @@ li {
   color: #666; /*font color*/
 }
 
-/*pseudo class added onto li element selector*/
+/*pseudo class added onto element selector for li elements*/
 li:nth-child(2n) {
   background: #f7f7f7;
+}
+
+/*css element selector for span elements*/
+span {
+  background: #e74c3c;
+  height: 40px; /*increase height of element*/
+  margin-right: 20px;
+  text-align: center; /*horizontal alignment if text in element*/
+  color: white; /*font color ie icon color*/
+  width: 0; /*increase width of element - start off at 0*/
+  display: inline-block; /*defaults as inline element - ie cannot set width/height or top/bot margin/padding*/
+  transition: 0.2s linear; /*time,type - transition between hover pseudo class*/
+  opacity: 0; /*default opacity of element*/
+}
+
+/*pseudo class added onto element selector for li elements that then specifies with descendent element selector for span elements*/
+li:hover span {
+  width: 40px; /*increase width of element*/
+  opacity: 1; /*increase opacity of element*/
 }
 
 /*css id selector for the outer most div element*/
