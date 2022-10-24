@@ -42,7 +42,7 @@ $("input[type='text']").keypress(function (e) {
     //grabbing the toDoText(value) from input
     //jQueryListObject.method - getter - return value of first matching elementObject in jQueryListObject
     const toDoText = $(this).val();
-    //jQueryListObject.method(stringObject) - setter - sets the  value for all elementObjects in jQueryListObject
+    //jQueryListObject.syncMethod(stringObject) - setter - sets the  value for all elementObjects in jQueryListObject
     $(this).val(""); //clear input
     //create a new li element and add it as a child to the parent ul element
     //jQueryListObject.syncMethod("htmlMarkupStringObject") - setter - creates and sets child element in all elementObjects(parent elements) in jQueryListObject
@@ -50,4 +50,15 @@ $("input[type='text']").keypress(function (e) {
       `<li><span><i class="fa fa-trash"></i></span> ${toDoText}</li>`
     );
   }
+});
+
+//*********************************
+//Click on Plus to hide/show input
+//*********************************
+//jQueryWebApiMethod("css class selector") -> jQueryListObject with all matching elementObjects
+//jQueryListObject.asyncMethod(callback) - setter - execute addEventListener with clickEventStringObject on all elementObjects in jQueryListObject
+$(".fa-plus").click(function () {
+  //jQueryWebApiMethod("css element selector") -> jQueryListObject with all matching elementObjects
+  //jQueryListObject.syncMethod() - setter - check what the inline style property display's value is and sets it to the the opposit on all elemntObjects in jQueryListObject //Note - changes opacity before setting display value
+  $("input[type='text']").fadeToggle();
 });
