@@ -3,6 +3,19 @@
 
 /*css element selector for body element*/
 body {
+  /*uigradients.com*/
+  background: #2c3e50; /* fallback for old browsers (cascading) */
+  background: -webkit-linear-gradient(
+    to right,
+    #3498db,
+    #2c3e50
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #3498db,
+    #2c3e50
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
   font-family: "Roboto", sans-serif;
 }
 
@@ -15,6 +28,11 @@ h1 {
   text-transform: uppercase; /*set text to uppercase*/
   font-size: 24px;
   font-weight: normal; /*overwrite default h1 bold font-weight*/
+}
+
+/*css class selector for i element - adding css properties ontop of existing css properties set on class by fontawesomes style.css file*/
+.fa-plus {
+  float: right; /*move to right of its container*/
 }
 
 /*css element selector for input element*/

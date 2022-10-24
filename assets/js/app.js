@@ -46,6 +46,8 @@ $("input[type='text']").keypress(function (e) {
     $(this).val(""); //clear input
     //create a new li element and add it as a child to the parent ul element
     //jQueryListObject.syncMethod("htmlMarkupStringObject") - setter - creates and sets child element in all elementObjects(parent elements) in jQueryListObject
-    $("ul").append(`<li><span>X</span> ${toDoText}</li>`);
+    $("ul").append(
+      `<li><span><i class="fa fa-trash"></i></span> ${toDoText}</li>`
+    );
   }
 });

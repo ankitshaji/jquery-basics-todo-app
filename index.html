@@ -13,11 +13,19 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
       rel="stylesheet"
+      type="text/css"
+    />
+    <!--fontawesome clientside css library - fontawesome style.css file/css library cdn-->
+    <!--client side css for browser to execute - GET request to cdn (ie third party domain/fontawesome webApiServer)-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css"
+      type="text/css"
     />
     <!--self created style.css file-->
     <!--client side css for browser to execute -->
     <!--NOTE - Should be set after other css libraries style.css file so that we can overwrite with our own style.css-->
-    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
     <!--downloaded jquery-2.2.4.min.js file - jQueryWebApi clientside js library -->
     <!--clientside js for browser to execute-->
     <!--NOTE - Should be set in head, so we can use its methods in self created app.js file-->
@@ -28,15 +36,34 @@
   </head>
   <body>
     <div id="container">
-      <h1>TO-DO LIST</h1>
+      <!--fontawesome css library classes in icon element tag-->
+      <h1>TO-DO LIST <i class="fa fa-plus" aria-hidden="true"></i></h1>
       <input type="text" placeholder="Add New Todo" />
       <ul>
-        <li><span>X</span> Take Medicine</li>
-        <li><span>X</span> Do Some Coding</li>
-        <li><span>X</span> Eat Food</li>
-        <li><span>X</span> Do Some Coding</li>
-        <li><span>X</span> Do Some Exercise/Shower</li>
-        <li><span>X</span> Eat Food</li>
+        <li>
+          <!--fontawesome css library classes in icon element tag-->
+          <span><i class="fa fa-trash"></i></span> Take Medicine
+        </li>
+        <li>
+          <!--fontawesome css library classes in icon element tag-->
+          <span><i class="fa fa-trash"></i></span> Do Some Coding
+        </li>
+        <li>
+          <!--fontawesome css library classes in icon element tag-->
+          <span><i class="fa fa-trash"></i></span> Eat Food
+        </li>
+        <li>
+          <!--fontawesome css library classes in icon element tag-->
+          <span><i class="fa fa-trash"></i></span> Do Some Coding
+        </li>
+        <li>
+          <!--fontawesome css library classes in icon element tag-->
+          <span><i class="fa fa-trash"></i></span> Do Some Exercise/Shower
+        </li>
+        <li>
+          <!--fontawesome css library classes in icon element tag-->
+          <span><i class="fa fa-trash"></i></span> Eat Food
+        </li>
       </ul>
     </div>
     <!--self created app.js file-->
